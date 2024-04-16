@@ -37,19 +37,38 @@ body {
   font-weight: 600;
   color: #000000;
   font-style: normal;
-  padding: 1rem;
   display: flex;
-  justify-content: center;
+  /*
+  justify-content es para filas
+  align-items es para columnas (flex-direction)
+  el flexbox no se utiliza para animacion
+  BEM bloques - elementos - modificadores
+  .card{}
+  .card__titule{}
+  .card__imagen{}
+  .card__boton{}
+  .card__boton--activo{}
+  utility-firts
+  Herramientas para css
+  tailwind y bootstrap
+  
+  */
+
+  justify-content: space-between;
 }
 
 .navegacion-principal a {
   font-family: "Krub", sans-serif;
-  font-weight: 600;
+  font-weight: bold; /*Como poner negritas el font*/
+  padding: 1rem;
   font-style: normal;
   font-size: 2rem;
   text-decoration: none;
   color: var(--blanco);
-  padding: 1rem;
+}
+.navegacion-principal a:hover {
+  color: var(--oscuro);
+  background-color: var(--primario);
 }
 
 .contenedor {
