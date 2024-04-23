@@ -1,5 +1,6 @@
 /*Custom properties (Propiedades personalizadas), esto sirve en casos de que quiera hacer un cambio global y no tener que estar buscando los lugares donde estan*/
 /*Paleta de color*/
+/*Crear un snippet buscador Snippet luego css.js*/
 :root {
   /*Variables (--)*/
   --blanco: #ffffff;
@@ -42,16 +43,19 @@ body {
   justify-content es para filas
   align-items es para columnas (flex-direction)
   el flexbox no se utiliza para animacion
-  BEM bloques - elementos - modificadores
+  - BEM bloques - elementos - modificadores
   .card{}
   .card__titule{}
   .card__imagen{}
   .card__boton{}
   .card__boton--activo{}
-  utility-firts
+  - utility-firts
+  - modulos
   Herramientas para css
-  tailwind y bootstrap
+  - tailwind y bootstrap
   
+  Snippet
+  Partes del codigo que puedes reutilizar
   */
 
   justify-content: space-between;
@@ -66,9 +70,29 @@ body {
   text-decoration: none;
   color: var(--blanco);
 }
+
 .navegacion-principal a:hover {
   color: var(--oscuro);
   background-color: var(--primario);
+}
+/*Tamaños recomendados para media queries
+480 px dispoditivos moviles
+768 px tablets
+1140 px laptops
+1400 px para monitores mas grandes 
+*/
+body {
+  background: beige;
+}
+@media (min-width: 480px) {
+  body {
+    background-color: blue;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-color: cornflowerblue;
+  }
 }
 
 .contenedor {
