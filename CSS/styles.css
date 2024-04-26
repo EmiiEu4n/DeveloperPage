@@ -12,19 +12,32 @@
 
 html {
   font-size: 62.5%;
+  /* Hack para box model */
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   font-size: 16px;
 }
 
-.titulo {
-  /*Agregar una fuente al estilo de letra*/
-  font-family: "Krub", sans-serif;
-  font-weight: 1000;
-  font-style: normal;
-  font-size: 3rem;
-  color: #000000;
+/* Tipografia */
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -38,7 +51,10 @@ body {
   font-weight: 600;
   color: #000000;
   font-style: normal;
+
   display: flex;
+  flex-direction: column;
+  align-items: center;
   /*
   justify-content es para filas
   align-items es para columnas (flex-direction)
@@ -54,11 +70,20 @@ body {
   Herramientas para css
   - tailwind y bootstrap
   
-  Snippet
-  Partes del codigo que puedes reutilizar
+  Snippet (Fragmento)
+  - Partes del codigo que puedes reutilizar
+
+  Descargar
+  - Responsive live
   */
 
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .navegacion-principal a {
@@ -75,28 +100,15 @@ body {
   color: var(--oscuro);
   background-color: var(--primario);
 }
-/*Tamaños recomendados para media queries
+/*Tamaños recomendados para media query
 480 px dispoditivos moviles
 768 px tablets
 1140 px laptops
 1400 px para monitores mas grandes 
 */
-body {
-  background: beige;
-}
-@media (min-width: 480px) {
-  body {
-    background-color: blue;
-  }
-}
-@media (min-width: 768px) {
-  body {
-    background-color: cornflowerblue;
-  }
-}
 
 .contenedor {
-  width: 120rem;
+  max-width: 120rem;
   /* 1ra manera mas detallada
   margin-top: 0;
   margin-left: auto;
@@ -113,4 +125,63 @@ Display: flex
 */
 .nav-bg {
   background-color: var(--secundario);
+}
+
+.hero {
+  background-image: url(../Image/MicrosoftTeams-image.png);
+  /* ../ los dos puntos diagonal es para salir de la carpeta donde estas */
+  background-repeat: no-repeat;
+  /* En imagenes pequeñas suele repetirse y abarcar el espacio de la pagina */
+  background-size: cover;
+  /* Sirve para cubrir toda la umagen con todo el tamaño */
+  height: 450px;
+  /* Alto del elemmento hero */
+  position: relative;
+  /* Para manipular la posicion, el padre siempre debe ser relative */
+}
+
+.contenedor-hero {
+  position: absolute;
+  /* Manipular la posicion, el hijo siempre debe ser absoluto */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* 0.7 transparencia Alpha */
+  width: 100%;
+  height: 100%;
+  /* Alinear vertical y horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; */
+}
+.contenedor-hero p,
+.contenedor-hero h2 {
+  color: var(--blanco);
+}
+.ubicacion {
+  display: flex;
+  align-items: flex-end;
+}
+
+.boton {
+  /* Color de boton */
+  background-color: var(--secundario);
+  /* Color del texto */
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  /* Separacion superior */
+  margin-top: 3rem;
+  font-size: 2rem;
+  /* Quitar subrayado */
+  text-decoration: none;
+  /* Poner mayuscula */
+  text-transform: uppercase;
+  font-weight: bold;
+  /* boton */
+  border-radius: 0.5rem;
+  width: 90%;
+  text-align: center;
 }
