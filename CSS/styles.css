@@ -8,6 +8,7 @@
   --primario: #ffc107;
   --secundario: #0097a7;
   --gris: #757575;
+  --lila: #d29bfd;
 }
 
 html {
@@ -23,6 +24,14 @@ html {
 
 body {
   font-size: 16px;
+  /* Tipo de letra */
+  font-family: krub;
+  /* Poner Gradiantes */
+  background-image: linear-gradient(
+    to top,
+    var(--secundario) 0%,
+    var(--blanco) 100%
+  );
 }
 
 /* Tipografia */
@@ -47,10 +56,8 @@ h3 {
 
 .navegacion-principal {
   background-color: var(--secundario);
-  font-family: "Krub", sans-serif;
   font-weight: 600;
   color: #000000;
-  font-style: normal;
 
   display: flex;
   flex-direction: column;
@@ -75,6 +82,9 @@ h3 {
 
   Descargar
   - Responsive live
+
+  Bluer (Desenfoque, difuminado)
+
   */
 
   justify-content: space-between;
@@ -87,7 +97,6 @@ h3 {
 }
 
 .navegacion-principal a {
-  font-family: "Krub", sans-serif;
   font-weight: bold; /*Como poner negritas el font*/
   padding: 1rem;
   font-style: normal;
@@ -185,3 +194,30 @@ Display: flex
   width: 90%;
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+    text-align: center;
+  }
+}
+
+.sombra {
+  /* Para generar una sombra */
+  box-shadow: 0px 5px 15px 0px rgba(112, 111, 112, 0.5);
+  /* motor para google chrome */
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 111, 112, 0.5);
+  /* Motor para mozilla firefox */
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 111, 112, 0.5);
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+/* ¿Para que sirve el hero? Es una imagen 
+
+Adaptar la parte "mis servicios" con flex box
+Pagina:
+https://cssgenerator.org/
+*/
