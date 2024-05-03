@@ -203,6 +203,7 @@ Display: flex
 }
 
 .sombra {
+  /* Se agrega por compatibilidad */
   /* Para generar una sombra */
   box-shadow: 0px 5px 15px 0px rgba(112, 111, 112, 0.5);
   /* motor para google chrome */
@@ -215,9 +216,53 @@ Display: flex
   margin-top: 2rem;
 }
 
+/* Grid: Guia */
 /* ¿Para que sirve el hero? Es una imagen 
 
 Adaptar la parte "mis servicios" con flex box
 Pagina:
 https://cssgenerator.org/
 */
+
+footer {
+  text-align: center;
+}
+
+/* Servicios */
+
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: 33.3% 33.3% 33.3%; */
+    /*  */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Ajustar color y negritas del h3 */
+  .servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+  }
+
+  .servicio p {
+    text-align: center;
+    /* interlineado para examen lo va pedir*/
+    line-height: 2;
+  }
+
+  .servicio .iconos {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primario);
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+    align-items: center;
+  }
+}
