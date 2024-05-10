@@ -29,7 +29,11 @@ body {
   /* Tipo de letra */
   font-family: krub, sans-serif;
   /* Poner Gradiantes */
-  background-image: linear-gradient(to top, var(--azul) 0%, var(--blanco) 100%);
+  background-image: linear-gradient(
+    to top,
+    var(--secundario) 0%,
+    var(--blanco) 100%
+  );
 }
 
 /* Tipografia */
@@ -261,7 +265,7 @@ https://cssgenerator.org/
   .servicio .iconos {
     display: flex;
     justify-content: center;
-    background-color: var(--azul);
+    background-color: var(--secundario);
     border-radius: 50%;
     height: 15rem;
     width: 15rem;
